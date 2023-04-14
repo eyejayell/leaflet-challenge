@@ -7,7 +7,7 @@ d3.json(queryUrl).then(function (data) {
 function createFeatures(earthquakeData) {
     function onEachFeature(feature, layer) {
 
-      layer.bindPopup(`<h3>Location: ${feature.properties.place}</h3><p>Depth: ${feature.geometry.coordinates[2]}</p>`);
+      layer.bindPopup(`<h3>Location: ${feature.properties.place}</h3><p>Depth: ${feature.geometry.coordinates[2]}</p>Magnitude: ${feature.properties.mag}<p>`);
     }
 
     function colorSelector(depth) {
